@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="A simple single page app to demonstrate Moduler JS application development." />
+		<meta name="author" content="pradeep_5k@hotmail.com" />
+		<title>Moduler JS App v0.1</title>
+		<!-- Application wide CSS -->
+		<link href="main.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!--
+		This demo module application contains 2 main containers:
+
+		header: -
+		1. Contains some text description about the application.
+		2. A <div> called 'launcher'. This will be used as Marionette Region which will be populated
+		based with module load/unload controls. These controls are wrapped in a Marionette ItemView
+		which uses  'tplmodlauncher' template.
+
+		section: -
+		1. <Section> 'appmodules' acts as a container of the modules. Each module is loaded in a Marionette
+		Region. Regions for module is created at run time based on the number of modules defined in
+		'manifest.json'.
+		2. Each module is contained is a <div> with 'modregion' class. Which is used to give style to each region.
+
+		manifest.json is an important part of the application
+		manifest.json structure: -
+			{
+				"modules":[
+							{
+								"url":"[mandatory] - Relative or absolute path to the module root folder",
+								"desc":"[optional] - Name of the module can be any valid test string.",
+								"param":"[optional] - Any valid JS object in JSON notation"
+							},
+							{
+								...
+							},
+							...
+						]
+			}
+
+		1. Any number of modules can be defined in the module array.
+		2. More than one instance of the same module can be loaded in two different regions at the same time.
+		3. 'desc' and 'param' are optional attributes. These are passed on to the respective module instance as is.
+		4. Application assumes that at the module root (the folder path specified in the 'url' attribute) there will be
+		atleast one file 'mod.js'. mod.js is the starting point of a module. mod.js should be a valid requirejs module and
+		should return a class reference. The module class must be a subclass of BaseModule.
+		-->
+		<header id="appheader">
+			<h2> Moduler JS - On demand moduler application development.</h2>
+			<div id="desc">
+				<span> Click on the 'Load Module' button of each module tab to load the Module in their specific region.
+					You can click 'Unload Module' to unload the module. Each module is load in its respective region only.</span>
+			</div>
+			<!-- contains the Module load/unload buttons -->
+			<div id="launcher"></div>
+		</header>
+		<!-- will contain the module regions -->
+		<section id="appmodules"></section>
+
+		<!---- Template ------->
+		<!-- underscore template for the module buttons -->
+		<script id="tplmodlauncher" type="text/template">
+			<div class="modlauncher">
+			<p><%- name %></p>
+			<button id="btnload" class="loadbutton">Load Module</button>
+			<button id="btnunload" class="unloadbutton">Unload Module</button>
+			</div>
+		</script>
+		<!--
+		this where the application starts
+		calling requirejs and pointing it to execute main.js.
+		Look into the main.js to follow the implementation.
+		-->
+		<script data-main="app/main.js" src="lib/require.min 2.1.11.js"></script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+#mod_scope #todoinputcontainer {
+	text-align: center;
+	padding: 5px;
+	height: 100px;
+	width: 100%;
+	background: #DDDDDD;
+}
+
+#mod_scope #todoinput {
+	height: 30px;
+	width: 200px;
+}
+
+#mod_scope .todoitem {
+	padding: 5px;
+	width: 100%;
+	border-bottom: 1px solid #999;;
+}
+
+#mod_scope .datetime {
+	color: #0000f0;
+}

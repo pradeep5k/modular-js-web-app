@@ -1,0 +1,56 @@
+/* global css */
+html *
+{
+   font-family: Arial;
+}
+/* element level css */
+body {
+	background: #CCCCCC;
+}
+
+header {
+	height: 200px;
+	width: 100%;
+	margin: 2px;
+	border-bottom: dashed 1px #FFFFFF;
+}
+
+section {
+	height: 100%;
+	width: 100%;
+	margin: 2px;
+	background: #F6E3CE;
+}
+
+
+/* class css*/
+.modlauncher {
+	text-align:center;
+	float:left;
+	margin: 1px;
+	padding: 1px;
+	height: 80px;
+	background: #777777;
+	border: solid 1px #999999;
+
+}
+
+.modregion {
+	height: 500px;
+	width: 500px;
+	float:left;
+	margin: 2px;
+	background: #FFFFFF;
+	border: solid 1px #FFFFFF;
+	overflow:scroll;
+}
+/* element specific css */
+#launcher {
+	margin: 1px;
+	padding: 1px;
+}
+#desc {
+	height: 50px;
+	width: 100%;
+	overflow:scroll;
+}

@@ -1,0 +1,17 @@
+{
+    "modules": [
+        {
+            "name": "Todo list for work.",
+            "config": {
+                "info": "any module specific data here..."
+            },
+            "url": "module/module1/"
+        }, {
+            "name": "Latest item in todo.",
+            "url": "module/module2/"
+        }, {
+            "name": "Todo list for home.",
+            "url": "module/module1/"
+        }
+    ]
+}
