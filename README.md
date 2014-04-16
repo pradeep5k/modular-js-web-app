@@ -27,9 +27,5 @@ To know about the implementation please read the code. index.html is a good star
 To run the POC host it on a web server and launch index.html.
 This POC has been briefly tested on the latest versions of Firefox, Safari, and Chrome on a Mac 10.7.x machine.
 
-
-
-
-
-moduler-web-app
-===============
+=====================
+Look forward to your feedback, ideas and any issue you find.
