@@ -1,8 +1,8 @@
-#ModulerWebApp v0.1
+#Modular JS Web App v0.1
 ===================
 
 ### The project
-ModulerWebApp is a POC to demonstrate a moduler javascript web app approach using some of the leading JS design patterns and libs. The objective of the POC is as follow:
+A POC to demonstrate a modular javascript web app approach using some of the leading JS design patterns and libs. The objective of the POC is as follow:
 
 1. How to allow lazy loading of the functional and visual modules on demand in a web application? Here definition of a module is an independent component/widget/sub app which can function and can be tested independently. This module can have its won HTML elements, styles and code.
 2. How the modules can communicate with each other without creating any dependency and coupling?
